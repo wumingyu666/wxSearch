@@ -1,0 +1,23 @@
+<!--index.wxml-->
+
+<import src="/wxSearch/wxSearch.wxml"/>
+<wux-navbar theme="dark">
+      <view>病情详情</view>
+      <wux-icon slot="right" type="ios-more" size="23" />
+</wux-navbar>
+
+
+<!--index.wxml-->
+<view class="container">
+  <towxml nodes="{{article}}"/>
+</view>
+
+
+
+
+
+
+
+
+
+

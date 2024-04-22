@@ -1,12 +1,53 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/diseases/diseases",
+    "pages/diseasesDetail/diseasesDetail",
+    "pages/chat/chat",
+    "pages/newsDetail/NewsDetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "wxSearch-weappdev.com",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "fui-row": "components/firstui/fui-row/fui-row",
+    "fui-col": "components/firstui/fui-col/fui-col",
+    "fui-section":"components/firstui/fui-section/fui-section",
+    "fui-list": "components/firstui/fui-list/fui-list",
+    "fui-list-cell": "components/firstui/fui-list-cell/fui-list-cell",
+    "wux-navbar": "dist/navbar/index",
+    "wux-icon": "dist/icon/index",
+    "wux-cell-group": "dist/cell-group/index",
+    "wux-cell": "dist/cell/index",
+    "towxml":"/towxml/towxml"
+  },
+  "tabBar": {
+    "color": "#8c8c8c",
+    "selectedColor": "#f4645f",
+    "backgroundColor": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/首页.png",
+      "selectedIconPath": "images/首页.png"
+    },
+    {
+      "pagePath": "pages/diseases/diseases",
+      "text": "常见病",
+      "iconPath": "images/保护伞.png",
+      "selectedIconPath": "images/保护伞.png"
+    },
+    {
+      "pagePath": "pages/chat/chat",
+      "text": "智能机器人",
+      "iconPath": "images/对话信息.png",
+      "selectedIconPath": "images/对话信息.png"
+    }
+  ],
+    "position": "bottom"
   }
 }

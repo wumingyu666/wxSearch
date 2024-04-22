@@ -1,0 +1,28 @@
+<!--index.wxml-->
+
+<import src="/wxSearch/wxSearch.wxml"/>
+<wux-navbar theme="dark">
+      <view>大学生常见病</view>
+      <wux-icon slot="right" type="ios-more" size="23" />
+</wux-navbar>
+
+<view class="page">
+  <wux-cell-group title="微信开放能力">
+      <wux-cell
+        title="头痛"
+        bindtap="goToDiseasesDetail"
+      ></wux-cell>
+    </wux-cell-group>
+  
+</view>
+
+
+
+
+
+
+
+
+
+
+
