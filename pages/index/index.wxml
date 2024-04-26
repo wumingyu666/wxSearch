@@ -1,5 +1,5 @@
 <!--index.wxml-->
-
+<import src="../common/template/article.wxml"/>
 <import src="/wxSearch/wxSearch.wxml"/>
 
 <wux-navbar theme="dark">
@@ -20,18 +20,22 @@
     </view>
 	</fui-col>
 </fui-row>
+<!--  -->
 <fui-row margin-bottom="24rpx" margin-top="4rpx">
   <fui-section title="热门新闻" isLine></fui-section>
 </fui-row>
-<fui-row margin-bottom="24rpx" margin-top="4rpx">
-	<fui-col>
-		<view class="fui-col__item fui-color__black">
-    <fui-list wx:for="{{list}}" wx:for-item="item">
-	    <fui-list-cell bindtap="gotoNewsDetail" data-content="{{item.content}}">{{item.name}}</fui-list-cell>
-    </fui-list>
-    </view>
-	</fui-col>
-</fui-row>
+<!-- 新闻列表 -->
+<view class="articles">
+    <block wx:for="{{ news.newsList }}">
+        <template is="newsStyle2" data="{{ ...item }}" />
+    </block>
+</view>
+
+
+
+
+
+
 
 
 

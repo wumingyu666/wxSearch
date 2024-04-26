@@ -13,6 +13,7 @@
     "navigationBarTitleText": "wxSearch-weappdev.com",
     "navigationBarTextStyle": "black"
   },
+  "navigationBarTitleText": "Media",
   "usingComponents": {
     "fui-row": "components/firstui/fui-row/fui-row",
     "fui-col": "components/firstui/fui-col/fui-col",
@@ -23,7 +24,8 @@
     "wux-icon": "dist/icon/index",
     "wux-cell-group": "dist/cell-group/index",
     "wux-cell": "dist/cell/index",
-    "towxml":"/towxml/towxml"
+    "towxml":"/towxml/towxml",
+    "wux-media": "/dist/media/index"
   },
   "tabBar": {
     "color": "#8c8c8c",

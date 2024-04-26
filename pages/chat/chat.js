@@ -61,61 +61,60 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (wx.getStorageSync('expireTime') == null || wx.getStorageSync('expireTime') < Date.now()) {
-      wx.removeStorageSync('expireTime')
-      let username = wx.getStorageSync('username')
-      wx.removeStorageSync('username')
-      wx.request({
-        url: 'http://127.0.0.1:80/user/logout',
-        method: "get",
-        data: {
-          "username": username,
-        },
-        success: ({
-          data
-        }) => {
-          wx.showToast({
-            icon: 'none',
-            title: '身份验证到期，请重新登录',
-            duration: 2500
-          })
-        }
-      })
+    // if (wx.getStorageSync('expireTime') == null || wx.getStorageSync('expireTime') < Date.now()) {
+    //   wx.removeStorageSync('expireTime')
+    //   let username = wx.getStorageSync('username')
+    //   wx.removeStorageSync('username')
+    //   wx.request({
+    //     url: 'http://127.0.0.1:80/user/logout',
+    //     method: "get",
+    //     data: {
+    //       "username": username,
+    //     },
+    //     success: ({
+    //       data
+    //     }) => {
+    //       wx.showToast({
+    //         icon: 'none',
+    //         title: '身份验证到期，请重新登录',
+    //         duration: 2500
+    //       })
+    //     }
+    //   })
 
-    }
-    wx.request({
-      url: 'http://127.0.0.1:80/user/checkUserKey',
-      method: "get",
-      data: {
-        "username": wx.getStorageSync('username'),
-        "key": wx.getStorageSync('key')
-      },
-      success: ({
-        data
-      }) => {
-        if (data.code === 500) {
-          wx.showToast({
-            icon: 'none',
-            title: data.message,
-            duration: 2500
-          })
-          wx.removeStorageSync('username')
-          wx.removeStorageSync('key')
-          wx.redirectTo({
-            url: '/pages/login/login',
-          })
-        }
-      }
-    })
-    if (wx.getStorageSync('username') == null || wx.getStorageSync('username') === '') {
-      wx.redirectTo({
-        url: '/pages/login/login',
-      })
-    }
+    // }
+    // wx.request({
+    //   url: 'http://127.0.0.1:80/user/checkUserKey',
+    //   method: "get",
+    //   data: {
+    //     "username": wx.getStorageSync('username'),
+    //     "key": wx.getStorageSync('key')
+    //   },
+    //   success: ({
+    //     data
+    //   }) => {
+    //     if (data.code === 500) {
+    //       wx.showToast({
+    //         icon: 'none',
+    //         title: data.message,
+    //         duration: 2500
+    //       })
+    //       wx.removeStorageSync('username')
+    //       wx.removeStorageSync('key')
+    //       wx.redirectTo({
+    //         url: '/pages/login/login',
+    //       })
+    //     }
+    //   }
+    // })
+    // if (wx.getStorageSync('username') == null || wx.getStorageSync('username') === '') {
+    //   wx.redirectTo({
+    //     url: '/pages/login/login',
+    //   })
+    // }
 
     wx.connectSocket({
-      url: 'ws://127.0.0.1:80/chatWebSocket/' + wx.getStorageSync('username')
-    })
+      url: 'wss://www.portgas.icu/v1/com/websocket/1'})
     // console.log( new Date());
     // console.log(wx.getStorageSync('username'));
 

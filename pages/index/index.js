@@ -9,7 +9,43 @@ Page({
     //     isShow: true
     //   }
     // }
-    list: [{"name":1,"content":1},{"name":2,"content":2}]
+    list: [{"name":1,"content":1,"content":1},{"name":2,"content":2}],
+    news: {
+      newsList:[
+      {
+          id: 1,
+          title: '新冠疫苗开始全球分发',
+          cover: 'https://example.com/news1.jpg',
+          content: '...',
+          images:["../../images/保护伞.png"],
+          tag:111,
+          date:"2024-04-22",
+          commont:"111",
+          parise:"111"
+      },
+      {
+          id: 2,
+          title: '美国总统大选落幕',
+          cover: 'https://example.com/news2.jpg',
+          content: '...',
+          images:["../../images/保护伞.png"],
+          tag:111,
+          date:"2024-04-22",
+          commont:"111",
+          parise:"111"
+      },
+      {
+          id: 3,
+          title: '中国成功发射嫦娥五号探月任务',
+          cover: 'https://example.com/news3.jpg',
+          content: '...',
+          images:["../../images/保护伞.png"],
+          tag:111,
+          date:"2024-04-22",
+          commont:"111",
+          parise:"111"
+      }
+  ]}
   },
   onLoad: function () {
     console.log('onLoad')

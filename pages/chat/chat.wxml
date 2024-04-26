@@ -27,7 +27,7 @@
           <image style='width: 4vw;' src='/images/向右.png' mode='widthFix'></image>
         </view>
         <view style='width: 11vw; height: 11vw;'>
-          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{cusHeadIcon}}'></image>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='/images/儿童.png'></image>
         </view>
       </view>
 
